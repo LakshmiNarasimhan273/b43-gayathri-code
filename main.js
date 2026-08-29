@@ -8,13 +8,14 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 const dbConnection = require("./config/dbconnection.config");
 
-const taskRoutes = require("./router/skill.router");
+const skillRoutes = require("./router/skill.router");
 const userRoutes = require("./router/user.router");
 
 app.use(cors());
 app.use(express.json());
-app.use("/tasks", taskRoutes);
-app.use("/user", userRoutes);
+app.use(express.urlencoded({ extended: true }));
+app.use("/api/skills", skillRoutes);
+app.use("/api/users", userRoutes);
 
 dbConnection();
 app.listen(process.env.port, () => {

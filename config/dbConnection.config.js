@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const dbConnection = async () => {
     try {
-        const mongoUri = process.env.MONGODB_URI || process.env.dbPort;
+        const mongoUri = process.env.atlasPort;
 
         if (!mongoUri) {
             console.log("MongoDB URI is not configured. Please set MONGODB_URI in your environment.");

@@ -10,18 +10,26 @@ const skillSchema = new mongoose.Schema({
         requires: true,
         enum:["Programming","Design","Marketing","Bussiness","Photography","Music","Other"],
     },
-    description:{
-        type: String,
-        requires: true,
-    },
     level:{
         type: String,
         requires: true,
         enum:["Beginner","Intermediate","Advanced"],
     },
+    duration:{
+        type: String,
+        requires: true,
+    },
+    instructor:{
+        type: String,
+        requires: true,
+    },  
     price:{
         type: Number,
         requires: true,
+    },
+    image:{
+        type: String,
+        requires: true, 
     },
     status:{
         type: String,
