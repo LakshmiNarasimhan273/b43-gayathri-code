@@ -6,7 +6,7 @@ const cors = require("cors");
 const dns = require("dns");
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
-const dbConnection = require("./config/dbconnection.config");
+const dbConnection = require("./config/dbConnection.config");
 
 const skillRoutes = require("./router/skill.router");
 const userRoutes = require("./router/user.router");
